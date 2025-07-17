@@ -12,19 +12,7 @@ function clock (){
     hour.innerText = time.getHours()
     minutes.innerText = time.getMinutes()
     second.innerText = time.getSeconds()
-    let ampm = "am"
-    if(hour >= 12)
-    {
-        ampm = "pm"
-    }
-    if(hour === 0)
-    {
-        hour = 12
-    }
-    else if (hour > 12)
-    {
-        hour -= 12
-    }
+    var ampm = hours >= 12 ? 'pm' : 'am';
 }
 setInterval(()=>{
      clock() 
